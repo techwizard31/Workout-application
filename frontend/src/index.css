@@ -1,0 +1,144 @@
+/* @import url("https://fonts.googleis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap"); */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages {
+  max-width: 98%;
+  padding: 20px;
+  margin: 0 auto;
+}
+.home{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.workout-details{
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+.workout-details h4{
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+.workout-details p{
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 25px;
+}
+.workout-details span{
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+label,input{
+  display: block;
+}
+input{
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button{
+  background: var(--primary);
+  border: 0;
+  color: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 150px;
+  height: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+div.error{
+  padding: 10px;
+  background: #ffefff;
+  border: 1px solid var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+  width: 80%;
+}
+.create{
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.full{
+  display: flex;
+  flex-direction: column;
+}
+input.error{
+  border: 1px solid var(--error);
+}
+nav{
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 10px;
+}
+ form.signup,form.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 23rem;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+ }
+ nav button{
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  pad: 6px 10px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+ }
