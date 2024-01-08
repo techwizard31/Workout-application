@@ -20,8 +20,8 @@ app.use("/api/user", userRoutes);
 mongoose
   .connect(process.env.MONG_URI)
   .then(() => {
-    app.listen(process.env.PORT, () => {
-      console.log("connected to mongodb and listening at port", process.env.PORT);
+    app.listen(https://ista-workout.onrender.com, () => {
+      console.log("connected to mongodb and listening at port");
     });
   })
   .catch((err) => {
