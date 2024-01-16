@@ -1,10 +1,9 @@
-require("dotenv").config();
-
 const express = require("express");
 const mongoose = require("mongoose");
 const workoutroutes = require("./routes/workouts.js");
 const userRoutes = require("./routes/user.js");
 const PORT = process.env.PORT || 4000
+require("dotenv").config();
 const app = express();
 
 app.use(express.json());
