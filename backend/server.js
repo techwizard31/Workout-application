@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 });
 
 const corsOptions = {
-  origin: process.env.LINK,
+  origin: "http://workout-application-rust.vercel.app",
   optionsSuccessStatus: 200,
   credentials: true,
 };
