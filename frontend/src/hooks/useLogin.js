@@ -10,7 +10,7 @@ export const useLogin = ()=>{
         setIsloading(true)
         setError(null)
 
-        const response = await fetch('/api/user/login',{
+        const response = await fetch(`${process.env.LINK}/api/user/login`,{
             method:"POST",
             headers:{'Content-type':'application/json'},
             body:JSON.stringify({email,password})
