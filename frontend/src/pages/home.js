@@ -1,20 +1,19 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutContext";
 import WorkoutDetail from "../components/WorkoutDetail";
-import Workoutform from "../components/workoutform";
+import Workoutform from "../components/Workoutform";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 function Home() {
   const { workouts, dispatch } = useWorkoutsContext();
-  const {user} = useAuthContext();
+  const { user } = useAuthContext();
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch(`${process.env.LINK}/api/workouts`,{
-        headers:{
-          'Authorization':`Bearer ${user.token}`
-        }
+      const response = await fetch(`${process.env.LINK}/api/workouts`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
       });
       const json = await response.json();
 
@@ -22,10 +21,12 @@ function Home() {
         dispatch({ type: "SET_WORKOUTS", payload: json });
       }
     };
-    if(user){
+    
+    if (user) {
       fetchWorkouts();
     }
-  }, [dispatch]);
+  }, [dispatch, user]); // Include user in the dependency array
+
   return (
     <div className="home">
       <div className="workouts">
